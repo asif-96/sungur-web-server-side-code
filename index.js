@@ -98,7 +98,7 @@ client.connect(err => {
     // get order data
     app.get('/broadbands/:id', (req, res) => {
         const { id } = req.params;
-        boradbands.find({'_id': ObjectID(id)})
+        boradbands.find({_id: ObjectID(id)})
             .toArray((err, documents) => {
                 res.send(documents[0])
             })
